@@ -1,0 +1,56 @@
+$img-path: '../images/';
+$moz: '-moz-';
+$wbk: '-webkit-';
+
+@mixin borderRadius($val) {
+  #{$moz}border-radius: $val;
+  #{$wbk}border-radius: $val;
+  border-radius: $val;
+}
+
+//**********************************************************************************************************************
+
+body {
+  background: #666;
+  font-family: Arial;
+  font-size: 16px;
+}
+
+.container { //1
+  .todo-list-container { //2
+    @include borderRadius(5px 5px 0 0);
+    position: relative;
+    width: 268px;
+    h2 { //3
+      background: url('#{$img-path}todolist-header.png') no-repeat;
+      color: #FFF;
+      font-size: 20px;
+      line-height: 2;
+      margin: 0;
+      padding: 0 0 12px;
+      text-align: center;
+    }
+    ul { //3
+      background: transparent url('#{$img-path}todolist-v-bg.gif') repeat-y 1px 0;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li:first-child {
+        //border-top: 1px solid #dde1e6;
+      }
+      li { //4
+        border-bottom: 1px solid #dde1e6;
+        font-family: Comics, Arial, serif;
+      }
+      input { //4
+        border-right: 1px solid #000;
+        padding: 0 10px 0 0;
+      }
+    }
+    .bottom {
+      background: url('#{$img-path}todolist-btm.png') no-repeat 1px 0;
+      height: 6px;
+      width: auto;
+    }
+  }
+}

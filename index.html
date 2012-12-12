@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>JSTools</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script data-main="js/main.js" src="js/require-jquery.js"></script>
+</head>
+<body>
+    <div class="container">
+        <script id="todo-list-container" type="text/x-handlebars-template">
+            <div class="todo-list-container">
+                <h2>{{title}}</h2>
+                <ul>
+                {{#each todoItems}}
+                    <li><input type="checkbox"> <span></span><span>{{todoText}}</span></li>
+                {{/each}}
+                </ul>
+                <div class="bottom"></div>
+            </div>
+        </script>
+    </div>
+</body>
+</html>
