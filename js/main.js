@@ -6,7 +6,7 @@ require(['jquery', 'handlebars', 'underscorejs-min', 'app'], function ($) {
         console.info('App loaded!', _4bram);
 
         var todoList = {};
-            todoList.title = 'The Page';
+            todoList.title = 'ToDo List';
             todoList.todoItems = [];
 
         _.each(_4bram.ToDoList, function (listItem, index) {

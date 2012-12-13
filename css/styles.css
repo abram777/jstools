@@ -11,6 +11,9 @@ body {
   position: relative;
   width: 268px;
 }
+.container .todo-list-container > div {
+  position: relative;
+}
 .container .todo-list-container h2 {
   background: url("../images/todolist-header.png") no-repeat;
   color: #FFF;
@@ -23,12 +26,22 @@ body {
 .container .todo-list-container ul {
   background: transparent url("../images/todolist-v-bg.gif") repeat-y 1px 0;
   list-style: none;
-  margin: 0;
-  padding: 0;
+  margin: -8px 0 0;
+  padding: 10px 0 5px;
+}
+.container .todo-list-container ul li:first-child {
+  border-top: none;
 }
 .container .todo-list-container ul li {
-  border-bottom: 1px solid #dde1e6;
+  border-top: 1px solid #dde1e6;
   font-family: Comics, Arial, serif;
+  padding: 0 0 0 13px;
+}
+.container .todo-list-container ul li span:first-child {
+  padding: 0;
+}
+.container .todo-list-container ul li span {
+  padding-left: 10px;
 }
 .container .todo-list-container ul input {
   border-right: 1px solid #000;

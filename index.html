@@ -10,10 +10,10 @@
     <div class="container">
         <script id="todo-list-container" type="text/x-handlebars-template">
             <div class="todo-list-container">
-                <h2>{{title}}</h2>
+                <div><h2>{{title}}</h2></div>
                 <ul>
                 {{#each todoItems}}
-                    <li><input type="checkbox"> <span></span><span>{{todoText}}</span></li>
+                    <li><input type="checkbox"> <span></span><span>{{truncate todoText 25}}</span></li>
                 {{/each}}
                 </ul>
                 <div class="bottom"></div>

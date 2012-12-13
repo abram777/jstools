@@ -21,6 +21,9 @@ body {
     @include borderRadius(5px 5px 0 0);
     position: relative;
     width: 268px;
+    & > div {
+      position: relative;
+    }
     h2 { //3
       background: url('#{$img-path}todolist-header.png') no-repeat;
       color: #FFF;
@@ -33,14 +36,21 @@ body {
     ul { //3
       background: transparent url('#{$img-path}todolist-v-bg.gif') repeat-y 1px 0;
       list-style: none;
-      margin: 0;
-      padding: 0;
+      margin: -8px 0 0;
+      padding: 10px 0 5px;
       li:first-child {
-        //border-top: 1px solid #dde1e6;
+        border-top: none;
       }
       li { //4
-        border-bottom: 1px solid #dde1e6;
+        border-top: 1px solid #dde1e6;
         font-family: Comics, Arial, serif;
+        padding: 0 0 0 13px;
+      }
+      li span:first-child {
+        padding: 0;
+      }
+      li span {
+        padding-left: 10px;
       }
       input { //4
         border-right: 1px solid #000;
